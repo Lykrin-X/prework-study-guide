@@ -11,6 +11,7 @@
     <header id="header">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+      <h2>✨ Open the Console to See What's Happening ✨</h2>
     </header>
     <main>
       <section class="card" id="html-section">
@@ -23,7 +24,12 @@
           <li>HTML attributes are always defined in the beginning element, never the closing element.</li>
           <li>HTML elements are usually composed of an opening tag and a closing tag represented with angle brackets (<>).</li>
           <li>In seemantic HTML elements, the name of the element describe its content and the role it plays on a webpage.</li>
-          <li>A link(<>) element creates the connection to the external file.</li>
+          <li>A link(<>) element creates the connection to the external file.
+          <ul>
+            <li>JS files are linked within the body(<>) element.</li>
+            <li>CSS files are linked within the head(<>) element.</li>
+          </ul>
+          </li>
           <li>The rel attritubte specifies the relationship between the current document and the linked document resource.</li>
           <li>The href attribute specifices the location (URL) of the external resource.</li>
           <li>The href attribute is using a relative path. This means the location is derived from the current location</li>
@@ -72,8 +78,19 @@
           <li>git add: adds modifications in the current working branch to the staging area</li>
           <li>The staging area informs Git that changes will be added in the next commit.</li>
           <li>git pull: receives a branch's modifications into the local environment</li>
+          <li>git push: push up your changes to the remote repository</li>
           <li>The origin keyword indicates the source of the pull will be in the GitHub repo.</li>
           <li>It is important to always do a git pull to make sure you are on the latest version of the project before working.</li>
+          <li>Git flow:
+            <ul>
+              <li>Create a branch, creating a space to work without affecting the default (main) branch. git checkout -b branch name</li>
+              <li>Make changes, add new files, edit existing ones, moving files to new locations, etc.. git add -A</li>
+              <li>Commit and push your changes to your branch, give each commit a descriptive messages to help understand what changes are contained. git commit - m "commit description"</li>
+              <li>Create pull request, ask collaborators for feedback on your changes. Include a summary of the changes and problems they solve. git pull origin main; git push origin "branch name"</li>
+              <li>Merge your pull request, onced approved merge your branch so that your changes appear on the default branch.</li>
+              <li>Delete your branch, indicates a work branch is complete and prevents you or others from accidentally using old branches.</li>
+            </ul>
+          </li>
         </ul>
       </section>
 
@@ -81,6 +98,79 @@
         <h2>JavaScript</h2>
         <ul>
           <li>Enter your JavaScript notes here</li>
+          <li>Variables are containers that store values.</li>
+          <li>In JS to declare a variable, we use the var keyword. Variable names must be unique.</li>
+          <li>A variable can be declared and given a value in the same line.</li>
+          <li>A semicolon at the end of a line indicates where a statement ends.</li>
+          <li>JavaScript is case sensitive. myVariable &#8800 myvariable</li>
+          <li>String: a sequence of characters used to represent text, signified using '' or "" </li>
+          <li>Boolean: a logical data type that can only have the values true or false</li>
+          <li>True/False are special keywords that don't need quote marks.
+            <ul>
+              <li>A value is considered falsy if it is one of the following values: 0, -0, On, "", null, undefined, NaN, or a Boolean data type with the value of false.</li>
+            </ul>
+          </li>
+          <li>Array: a single variable that is used to hold a group of data.
+            <ul>
+              <li>Ex. Array: let myVariable = [1,'Bob','Steve',10];</li>
+              <li>A single array can store different types of data, such as strings, numbers, and so on.</li>
+              <li>The length property can be used to find the length of an array.</li>
+            </ul>
+          </li>
+          <li>Each item in an array has a  unique number attached to it, called a numeric index, that allows you to access it individually.</li>
+          <li>Ex: let myVariable = [1,'Bob','Steve',10]; myVariable[0] = 1 </li>
+          <li>A for() loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
+          <li>A for() loop contains the following three important statements:
+            <ul>
+              <li>The first statement determines the starting point for our loop. Ex: var x = 0;</li>
+              <li>The second statement is the condition. Ex: x < shapes.length;</li>
+              <li>The final statement is what allows the array to iterate over each item. Ex: x++ (a shortcut for writing x+1)</li>
+              <li>for(var x = 0; x < shapes.length; x++) </li>
+            </ul>
+          </li>
+          <li>Object: Everything in JavaScript is an object and can be stored in a variable.</li>
+          <li>Comments are snippets of text that can be added along with code.</li>
+          <li>You can write comments in JavaScript just as you can in CSS: /*Everything in between is a comment.*/</li>
+          <li>If your comment contains no line breaks, it's an option to put it behind two slashes like this: // This is a comment</li>
+          <li>Operator: a mathematical symbol that produces a result based on two value (or variables).
+            <ul>
+              <li>+: add two numbers together or combine two strings</li>
+              <li>-, *, /: subtraction, multiplication, division respectively, perform the same as in basic math</li>
+              <li>= : assignment, assigns a value to a variable</li>
+              <li>=== :Strict equality, performs a test to see if two values are equal. It returns a true/false (Boolean) result.</li>
+              <li>!, !==: Not, Does-not-equal, returns the logically opposite value of what it precedes. It turns a true into a false, etc..</li>
+              <li>When (!, !==) is used alongside the Equality operator, the negation operator tests whether two values are not equal.</li>
+            </ul>
+          </li>
+          <li>Conditionals are code structures used to test if an expression returns true or not.</li>
+          <li>Function: a set of instructions that tells the computer how to perform a certain task</li>
+          <li>Functions are a way of packaging functionality that you wish to reuse.</li>
+          <li>Functions do not automatically execute, to execute a function we must call it in our code..</li>
+          <li>To create a function we use the function keyword to declare a new variable, then we give our function a unique name:
+            <ul>
+              <li>Ex: function helloWorld(){// code to be executed}</li>
+            </ul>
+          </li>
+          <li>Functions often take arguments: bits of data they need to do their job.</li>
+          <li>Arguments: a value (primitive or object) passed as input to a function.</li>
+          <li>Arguments go inside the parentheses, separated by commas if there is more than one argument.</li>
+          <li>Event handlers: code structures that listen for activity in the browser, and run code in response</li>
+          <li>Null: a special value in JS that indicates the absence of an object</li>
+          <li>Undefined: indicates the absence of a value.</li>
+          <li>JavaScript is a dynamic language with dynamic types. Variables are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.</li>
+          <li>JS is also a weakly typed language, which means it allows implicit type conversion when an operation involves mismatched types, instead of throwing type errors.</li>
+          <li>Primitive types: An immutable value whose content cannot be changed without creating an entirely new value.</li>
+          <li>All primitive types, except null, can be tested by the typeof operator. === null is used to test for null.</li>
+          <li>BigInt values represent numeric values which are too large to be represented by the number primitive.</li>
+          <li>A BigInt is created by appending n to the end of an integer or by calling the BigInt() function.</li>
+          <li>JavaScript strings are immutable once a string is created, it is not possible to modify it.</li>
+          <li>Symbol: a unique and immutable primitive value and may be used as the key of an Object property</li>
+          <li>The purpose of symbols is to create unique property keys that are guaranteed not to clash with keys from other code.</li>
+          <li>Identifier: a sequence of characters in the code that identifies a variable, function, or property</li>
+          <li>We can use the console.log() method to output a message to the web console by adding an argument.</li>
+          <li>Math.floor() and Math.random() are both properties of JavaScript's built-in Math object that can be used together to generate a random number.</li>
+          <li>Control flow is the order in which a computer executes code in a script.</li>
+          <li>In JavaScript, code runs from the first statement at the top of the page, down to the last statement at the bottom of the page.</li>
         </ul>
       </section>
     </main>
@@ -88,5 +178,6 @@
     <footer>
       <p>I can code!</p>
     </footer>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
