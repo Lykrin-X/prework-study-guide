@@ -78,14 +78,15 @@
           <li>git add: adds modifications in the current working branch to the staging area</li>
           <li>The staging area informs Git that changes will be added in the next commit.</li>
           <li>git pull: receives a branch's modifications into the local environment</li>
+          <li>git push: push up your changes to the remote repository</li>
           <li>The origin keyword indicates the source of the pull will be in the GitHub repo.</li>
           <li>It is important to always do a git pull to make sure you are on the latest version of the project before working.</li>
           <li>Git flow:
             <ul>
-              <li>Create a branch, creating a space to work without affecting the default (main) branch.</li>
-              <li>Make changes, add new files, edit existing ones, moving files to new locations, etc..</li>
-              <li>Commit and push your changes to your branch, give each commit a descriptive messages to help understand what changes are contained.</li>
-              <li>Create pull request, ask collaborators for feedback on your changes. Include a summary of the changes and problems they solve.</li>
+              <li>Create a branch, creating a space to work without affecting the default (main) branch. git checkout -b branch name</li>
+              <li>Make changes, add new files, edit existing ones, moving files to new locations, etc.. git add -A</li>
+              <li>Commit and push your changes to your branch, give each commit a descriptive messages to help understand what changes are contained. git commit - m "commit description"</li>
+              <li>Create pull request, ask collaborators for feedback on your changes. Include a summary of the changes and problems they solve. git pull origin main; git push origin "branch name"</li>
               <li>Merge your pull request, onced approved merge your branch so that your changes appear on the default branch.</li>
               <li>Delete your branch, indicates a work branch is complete and prevents you or others from accidentally using old branches.</li>
             </ul>
@@ -118,12 +119,13 @@
           </li>
           <li>Each item in an array has a  unique number attached to it, called a numeric index, that allows you to access it individually.</li>
           <li>Ex: let myVariable = [1,'Bob','Steve',10]; myVariable[0] = 1 </li>
-          <li>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
-          <li>A for loop contains the following three important statements:
+          <li>A for() loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
+          <li>A for() loop contains the following three important statements:
             <ul>
               <li>The first statement determines the starting point for our loop. Ex: var x = 0;</li>
               <li>The second statement is the condition. Ex: x < shapes.length;</li>
               <li>The final statement is what allows the array to iterate over each item. Ex: x++ (a shortcut for writing x+1)</li>
+              <li>for(var x = 0; x < shapes.length; x++) </li>
             </ul>
           </li>
           <li>Object: Everything in JavaScript is an object and can be stored in a variable.</li>
@@ -141,10 +143,14 @@
             </ul>
           </li>
           <li>Conditionals are code structures used to test if an expression returns true or not.</li>
-          <li>Function: a code snippet that can be called by other code or by itself, or a variable that refers to the function</li>
+          <li>Function: a set of instructions that tells the computer how to perform a certain task</li>
           <li>Functions are a way of packaging functionality that you wish to reuse.</li>
-          <li>It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code.</li>
-          <li>Functions typically look like a variable name followed by parentheses-().</li>
+          <li>Functions do not automatically execute, to execute a function we must call it in our code..</li>
+          <li>To create a function we use the function keyword to declare a new variable, then we give our function a unique name:
+            <ul>
+              <li>Ex: function helloWorld(){// code to be executed}</li>
+            </ul>
+          </li>
           <li>Functions often take arguments: bits of data they need to do their job.</li>
           <li>Arguments: a value (primitive or object) passed as input to a function.</li>
           <li>Arguments go inside the parentheses, separated by commas if there is more than one argument.</li>
@@ -161,7 +167,9 @@
           <li>Symbol: a unique and immutable primitive value and may be used as the key of an Object property</li>
           <li>The purpose of symbols is to create unique property keys that are guaranteed not to clash with keys from other code.</li>
           <li>Identifier: a sequence of characters in the code that identifies a variable, function, or property</li>
-          <li>We can use the console.log method to output a message to the web console by adding an argument.</li>
+          <li>We can use the console.log() method to output a message to the web console by adding an argument.</li>
+          <li>Math.floor() and Math.random() are both properties of JavaScript's built-in Math object that can be used together to generate a random number.</li>
+          <li>Control flow is the order in which a computer executes code in a script.</li>
           <li>In JavaScript, code runs from the first statement at the top of the page, down to the last statement at the bottom of the page.</li>
         </ul>
       </section>
